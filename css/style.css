@@ -127,6 +127,7 @@ header.on ~ #visual {margin-top: 126px;}
 #section2 {padding: 10rem 0;}
 #section2 .content {display: flex; gap: var(--gap1); flex-wrap: wrap;align-items: flex-start; }
 #section2 .content li {width: 30%; flex-grow: 1; position: relative; margin-bottom: 50px;}
+#section2 .content li.bgx {width: 30%; flex-grow: 1; position: relative; margin-bottom: 50px;}
 #section2 .content a.screen_pc {}
 #section2 .content a.screen_pc .web {border-radius: var(--round1); overflow: hidden; text-align: center; transition: 0.2s; position: relative; top: 0; box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 #section2 .content a.screen_pc .web img {width: 100%; }
@@ -138,6 +139,13 @@ header.on ~ #visual {margin-top: 126px;}
 #section2 .content a.screen_pc .textbox p {font-size: var(--fontCont1); color: var(--colorTxt2); margin-bottom: 2rem; line-height: 1.6;}
 #section2 .content a.screen_pc .textbox .icon {}
 #section2 .content a.screen_pc .textbox .icon img {}
+
+#section2 .content a.screen_bgx .textbox {border-radius:0 0 var(--round1) var(--round1); margin-top: -10rem;}
+#section2 .content a.screen_bgx .textbox em {font-size: var(--fontCate1); font-style: normal; color: var(--colorCate1);}
+#section2 .content a.screen_bgx .textbox h3 {font-size: var(--fontTit1); color: var(--colorTxt1); margin: 1rem 0;}
+#section2 .content a.screen_bgx .textbox p {font-size: var(--fontCont1); color: var(--colorTxt2); margin-bottom: 2rem; line-height: 1.6;}
+#section2 .content a.screen_bgx .textbox .icon {}
+#section2 .content a.screen_bgx .textbox .icon img {}
 
 
 #section2 .content a.screen_mobile {position: absolute; right: -20px; z-index: 3; top: 50%; transform: translate(0,-50%); }
@@ -279,6 +287,7 @@ footer .myinfo li a {}
     #section1 {flex-wrap: wrap;}
     #section1 a {width: 40%; flex-grow: 1; flex-shrink: 0;}
     #section2 .content a.screen_pc.web {height: 300px;}
+    /* #section2 .content a.screen_bgx.web {height: 300px;} */
 
     footer .myinfo li {font-size: 2rem;}
 }
@@ -342,10 +351,12 @@ footer .myinfo li a {}
 
 
 @media screen and (max-width:490px) {
-    #section2 .content li {width: 80%; flex-grow: 0; margin: 0 auto; margin-bottom: 30px;}
+    #section2 .content li {width: 80%; flex-grow: 0; margin: 0 auto;}
+    #section2 .content li.bgx {display: none;}
     #section3 .content li {width: 80%;}
     #section4 .content li {width: 40%;}
-    #section2 .content li a.screen_pc .textbox {background: none;}
+    #section2 .content li a.screen_pc .textbox {background: #fff;}
+    #section2 .content li a.screen_bgx .textbox {background: none;}
 }
 @media screen and (max-width:390px) {
     header,
